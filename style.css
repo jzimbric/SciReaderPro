@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    }
+header{
+    text-align: center;
+    background: black;
+    color: white;
+
+}
+footer{
+    text-align: center;
+    background: black;
+    color: white;
+
+}
+main{
+    background: teal;
+    margin: 10px;
+    padding: 20px;
+}
+
+section {
+    padding: 10px;
+    margin: 20px;
+    background: ghostwhite;
+    WIDTH: 800PX;
+    BORDER-RADIUS: 10PX 10PX 10PX 10PX;
+}
+
+.clickable {
+    padding: 10px;
+    margin: 20px;
+    background: ghostwhite;
+    WIDTH: 800PX;
+    BORDER-RADIUS: 10PX 10PX 10PX 10PX;
+}
+.new-words{
+    width: 400px;
+    margin:20px;
+    padding: 20px;
+    float: right;
+}
+.new-words p{
+    background: white;
+    border-radius: 10px 10px 10px 10px;
+    display: inline-block;
+    padding: 5px, 5px, 5px, 5px;
+    margin: 5px, 5px, 5px, 5px;
+}
+.prev-page{
+    padding: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    background: chartreuse; 
+        }
+.prev-page.hover{
+    background: white;
+}
+
+.next-page{
+    padding: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    background: chartreuse; 
+        }
+    
+.comments p:nth-child(even){
+    background: ghostwhite;
+}
+
+.comments p:nth-child(odd){
+    background: lavender;
+}
+
+
+
