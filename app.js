@@ -3,6 +3,13 @@ var main = function () {
 // Original JavaScript code by Chirp Internet: www.chirp.com.au
 // Please acknowledge use of this code by including this header.
 
+$("html").click(function(e){
+  console.log(e.target);
+});
+
+$("section").click(function(){
+  $("main").css("background-color", "white");
+});
 function Hilitor(id, tag)
 {
 
@@ -144,7 +151,9 @@ function Hilitor(id, tag)
             }
         }
   */
-    $(".clickable").click(function(e){
+  var vocabList = [];
+
+    $(".clickable").on("click", function(e){
          var s = window.getSelection();
          var range = s.getRangeAt(0);
          var node = s.anchorNode;
@@ -159,10 +168,25 @@ function Hilitor(id, tag)
         var str = range.toString().trim();
         var myHilitor = new Hilitor(".clickable");
         myHilitor.apply(str);
-        var $newWord = $("<p>").text(str);
-        $(".new-words").append($newWord);
-        $(".new-words").append(" ");
+        var $newWord = $('<p class="vocab"></p>').text(str);
+       $(".new-words").append($newWord);
+       $newWord.click(function(e){
+        $(this).hide();
+        vocabList.pop($newWord);
        });
+      $(".new-words").append(" ");
+        
+        vocabList.push($newWord);
+        //console.log(vocabList);
+       });
+   function displayContent(divs){ 
+    var a = [];
+    for (var i=0;i < divs.length; i++){
+      a.push(divs[i].innerHTML );
+    }
+  }
+  var clickables = $(".clickable").toArray();
+  console.log(clickables);
 
 };
 
